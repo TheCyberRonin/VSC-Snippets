@@ -1,0 +1,38 @@
+{
+  "Print to console": {
+   "prefix": "log",
+   "body": [
+     "console.log('$1');",
+     "$2"
+   ],
+   "description": "Log output to console"
+ },
+     "For Loop": {
+       "prefix": "loop",
+       "body": [
+           "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++)",
+           "{",
+           "\t$3",
+           "}"
+       ],
+       "description": "For Loop"
+   },
+   "Create function":{
+     "prefix": "func",
+     "body": [
+       "function ${1:name} (${2:params})",
+       "{",
+       "\t$3",
+       "}"
+     ]
+   },
+     "Create Arrow Function":{
+     "prefix": "arr",
+     "body": [
+       "(${1:params}) =>",
+       "{",
+       "\t$2",
+       "}"
+     ]
+   }
+}

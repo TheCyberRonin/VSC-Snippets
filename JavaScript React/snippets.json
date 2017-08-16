@@ -1,0 +1,37 @@
+{
+  "Create function":{
+      "prefix": "func",
+      "body": [
+              "function ${1:name} (${2:params})",
+              "{",
+              "\t$3",
+              "}"
+      ]
+  },
+      "Create Arrow Function":{
+      "prefix": "arr",
+      "body": [
+              "(${1:params}) =>",
+              "{",
+              "\t$2",
+              "}"
+      ]
+  },
+  "Create JSX Component":{
+      "prefix": "component",
+      "body":[
+          "import React, { Component } from 'react';",
+          "import '../css/${1:filename}.css';\n",
+          "class ${1:filename} extends Component",
+          "{",
+          "\trender()",
+          "\t{",
+          "\t\treturn(",
+          "\t\t\t$2",
+          "\t\t)",
+          "\t}",
+          "}",
+          "\nexport default ${1:filename};"
+      ]
+  }
+}
